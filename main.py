@@ -350,7 +350,7 @@ elif average_all_tests:
         cycle_avg_plotter_by_oa(avg_group)
 
 if export_csv:
-    print(f'Creating friction .csv file')
+    print('Creating friction .csv file')
     csv_path = 'Friction Coefficient CSV/'
     csv_name = 'FrictionCoefficientData.csv'
 
