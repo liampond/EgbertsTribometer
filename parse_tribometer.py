@@ -10,13 +10,11 @@ start_time = time.perf_counter()
 folder_path = 'ValidTribometerLogsMay16'
 
 # Parse all files?
-parse_all = bool(input('Parse all files? (True/False): '))
+parse_all = True
 
 # If not, which test(s) should be analyzed?
-if parse_all is not True:
-    parse_some = input('Parse some files (True/False): ')
-    if parse_some is True:
-        parse_test_list = ['ValidTribometerLogsMay16/Sample 17 TOCN-10_C20A-1_OA-7.5/TOCN-10_C20A-1_OA-7.5_20N_100mms_test1_']
+parse_some = True
+parse_test_list = ['ValidTribometerLogsMay16/Sample 17 TOCN-10_C20A-1_OA-7.5/TOCN-10_C20A-1_OA-7.5_20N_100mms_test1_']
 # TODO Concat folder and filename
 
 
