@@ -1,0 +1,8 @@
+Data/
+ParsedFiles/
+FrictionCoefficientCSV/
+FrictionCoefficientGraphs
+OldScripts/
+
+.idea/
+.git/
