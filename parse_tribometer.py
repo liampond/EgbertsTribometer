@@ -8,7 +8,7 @@ start_time = time.perf_counter()
 
 # Path that contains the folder with all the data
 folder_path = 'Data'
-# Parse files in all directories except the following:
+# Parse files in all subdirectories except the following:
 excluded_dirs = ['AdityaLogs',
                    'OldData']
 
@@ -139,7 +139,7 @@ def parse_file(test_name: str):
 if parse_all:
     for root, dirs, files in os.walk(folder_path):
 
-        dirs = [d for d in dirs if d not in excluded_dirs]
+        dirs[:] = [d for d in dirs if d not in excluded_dirs]
 
         for file in files:
             # Get the full path of the file
