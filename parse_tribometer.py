@@ -7,7 +7,10 @@ import time
 start_time = time.perf_counter()
 
 # Path that contains the folder with all the data
-folder_path = 'ValidTribometerLogsMay16'
+folder_path = 'Data'
+# Parse files in all directories except the following:
+excluded_dirs = ['AdityaLogs',
+                   'OldData']
 
 # Parse all files?
 parse_all = True
@@ -81,7 +84,7 @@ def parse_file(test_name: str):
         # Getting speed from the file header rather than the filename
         # 'Speed': r'_(\d+)mms',
         'SampleNo': r'Sample (\d+)',
-        'TestNo': r'test(.*?)_',
+        'TestNo': r'test(\d+)_?',
         'Date': r'_([^_]*)$'
     }
 
@@ -92,7 +95,7 @@ def parse_file(test_name: str):
 
     # Use re.search to find each regex expression in the filename
     for key, pattern in patterns.items():
-        match = re.search(pattern, test_name)
+        match = re.search(pattern, test_name, re.IGNORECASE)
 
         # If there's no match, assume the filename is incorrect and assign None
         if match is None and key != 'OAConc':
@@ -136,9 +139,7 @@ def parse_file(test_name: str):
 if parse_all:
     for root, dirs, files in os.walk(folder_path):
 
-        # Exclude hidden files and directories (names starting with a dot)
-        files = [f for f in files if not f.startswith('.')]
-        dirs = [d for d in dirs if not d.startswith('.')]
+        dirs = [d for d in dirs if d not in excluded_dirs]
 
         for file in files:
             # Get the full path of the file
