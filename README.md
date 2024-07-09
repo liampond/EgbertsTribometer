@@ -1,5 +1,5 @@
 # EgbertsTribometer
-This repo contains work done by Liam Pond and Albert Kalayil on the oleic acid project in the Nanotribology Lab in 2024. Supervised by Drs. Philip Egberts and Vinay Saini. 
+This repo contains work done by Liam Pond and Albert Kalayil on the oleic acid project in the Nanotribology Lab in 2024. Supervised by Drs. Philip Egberts, Vinay Saini, and Kasimuthumaniyan Subramanian. 
 
 ## Setup
 Note: The following commands are for Mac and Linux. Setup for Windows is slightly different.
@@ -20,10 +20,13 @@ Raw data will first need to be parsed with ```parse_tribometer.py```. Set ```fol
 ParsedFiles/
 * ```Master.csv```: Contains information about all parsed tests
 * ```ValidMaster.csv```: Master, but only for tests specified as valid in the ```test_validity``` function in ```parse_tribometer.py```.
+
 FrictionCoefficientCSV/
 * ```FrictionCoefficientData.csv```: .csv that contains the average friction per cycle for each test. Average friction is calculated by averaging friction values in the <strong>middle 40%</strong> of both the outgoing and returning phase of each cycle.
 * ```AverageFrictionCoefficientData.csv```: Same as above, but with per-cycle values further averaged to result in one number per test.
+
 FrictionCoefficientGraphs/
+
 Outdated — graphs are now generated in Origin using the .csv files above.
 
 ## Common Errors
