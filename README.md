@@ -30,3 +30,7 @@ FrictionCoefficientGraphs/
 Outdated — graphs are now generated in Origin using the .csv files above.
 
 ## Common Errors
+
+<img width="854" alt="Screenshot 2024-07-08 at 12 42 23 PM" src="https://github.com/user-attachments/assets/4e05f2cd-009e-4b5c-9710-27af10dd2b07">
+
+This means that a test parameter (in this case SampleNo) was unable to be read from the test filename. To fix this, modify either the regex code in ```parse_tribometer.py``` or your test's filename. If you're unfamiliar with regex expressions, ChatGPT is a good tool to build your own. For example, you can ask it to make regex that will return all numbers following the string 'SampleNo'. Remember that many test parameters are not recorded in the file itself and must be extracted from the filename. 
