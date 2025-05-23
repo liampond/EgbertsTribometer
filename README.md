@@ -1,5 +1,7 @@
 # EgbertsTribometer
-This repo contains work done by Liam Pond and Albert Kalayil on the oleic acid project in the Nanotribology Lab in 2024. Supervised by Drs. Philip Egberts, Vinay Saini, and Kasimuthumaniyan Subramanian. 
+This repo contains code to parse data collected by the custom tribometer in the Nanotribology Lab at the University of Calgary. Built by Liam Pond and Albert Kalayil and supervised by Drs. Philip Egberts, Vinay Saini, and Kasimuthumaniyan Subramanian.
+
+You can find the published results from this study at [https://doi.org/10.1016/j.wear.2025.205932](https://doi.org/10.1016/j.wear.2025.205932)
 
 ## Setup
 Note: The following commands are for Mac and Linux. Setup for Windows is slightly different.
